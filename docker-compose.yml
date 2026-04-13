@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: timescale/timescaledb:latest-pg16
+    container_name: qau_postgres
+    environment:
+      POSTGRES_DB: qau
+      POSTGRES_USER: qau_user
+      POSTGRES_PASSWORD: qau_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qau_user -d qau"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

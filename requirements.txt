@@ -1,0 +1,57 @@
+# Data & Database
+yfinance
+psycopg2-binary
+sqlalchemy
+pandas
+numpy
+
+# TimescaleDB
+# (via PostgreSQL extension, no Python package needed)
+
+# Technical Analysis
+ta
+
+# Machine Learning
+scikit-learn
+xgboost
+tensorflow
+statsmodels
+
+# LLM
+google-generativeai
+openai
+
+# News Scraping
+beautifulsoup4
+requests
+newspaper3k
+newsapi-python
+
+# NLP / Sentiment
+vaderSentiment
+
+# Telegram
+python-telegram-bot
+
+# Scheduling
+schedule
+APScheduler
+
+# Visualization
+matplotlib
+plotly
+
+# Utils
+python-dotenv
+loguru
+tqdm
+click
+
+# Backtesting
+backtesting
+
+# Hyperparameter Optimization
+optuna
+
+# Async DB
+asyncpg
